@@ -17,8 +17,7 @@ const PostList = () => {
                     const { data } = await axiosPosts.get();
                     setPosts(data);
                 } catch (error) {
-                    setErrorMessage(error.response.data);
-                    console.log(error);
+                    setErrorMessage(error.response?.data || error.message);
                 }
                 setIsLoading(false);
             })();
