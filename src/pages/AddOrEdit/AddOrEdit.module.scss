@@ -1,0 +1,49 @@
+.container {
+    // border: solid;
+    border-radius: 15px;
+    padding: 1.2em 0.9em;
+    background-color: #fefefe;
+    box-shadow: 1px 12px 20px -10px #ccc;
+    width: 100%;
+    display: block;
+    margin: auto;
+
+    @media(min-width: 768px) {
+        width: 90%;
+    }
+    @media(min-width: 992px) {
+        width: 75%;
+    }
+    @media(min-width: 1200px) {
+        width: 65%;
+    }
+    @media(min-width: 1400px) {
+        width: 60%;
+    }
+
+    .footer {
+        // border: solid;
+        display: flex;
+        // justify-content: space-around;
+        column-gap: 1.5em;
+        button {
+            border: solid 1px var(--neutral-light2);
+            border-radius: 5px;
+            padding: 0.5em 1em;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-transform: capitalize;
+            cursor: pointer;
+            background-color: var(--neutral-light);
+            color: var(--neutral-dark);
+            transition: all 0.3s;
+
+            &:hover {
+                background-color: var(--primary);
+                color: white;
+            }
+        }
+    }
+
+   
+}

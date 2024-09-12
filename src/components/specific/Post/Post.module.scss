@@ -1,0 +1,99 @@
+.container {
+    // border: solid;
+    border-radius: 15px;
+    padding: 1.2em 0.9em;
+    background-color: #fefefe;
+    box-shadow:  1px 12px 20px -10px #ccc;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    row-gap: 2em;
+
+    .image {
+        border: solid 1px var(--neutral-light1);
+        border-radius: 8px;
+        height: 260px;
+        overflow: hidden;
+        // aspect-ratio: 16 / 9;
+        // aspect-ratio: 4 / 3;
+        // object-fit: cover;
+
+        @media(min-width: 576px) {
+            height: 300px;
+        }
+        @media(min-width: 630px) {
+            height: 350px;
+        }
+        @media(min-width: 720px) {
+            height: 400px;
+        }
+        @media(min-width: 768px) {
+            height: 300px;
+        }
+    }
+
+    .titleWrapper {
+        // border: solid;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1em;
+
+        .title {
+            align-self: center;
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: var(--neutral-dark);
+
+        }
+        .description {
+            // border: solid;
+            font-size: 1.07rem;
+            color: var(--neutral-light2);
+            line-height: 1em;
+            word-break: break-all;
+        }
+    }
+
+    .buttonWrapper {
+        // border: solid;
+        display: flex;
+        justify-content: space-around;
+        margin-top: auto;
+        button {
+            border: solid 1px var(--neutral-light2);
+            border-radius: 7px;
+            padding: 0.2em 0;
+            font-size: 2rem;
+            font-weight: 500;
+            text-transform: capitalize;
+            cursor: pointer;
+            background-color: var(--neutral-light);
+            color: var(--neutral-dark);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                background-color: var(--primary);
+                border-color: var(--neutral-light);
+                color: white;
+            }
+        }
+        .edit {
+            font-size: 2rem;
+
+            flex: 0.5;
+        }
+        .delete {
+            font-size: 1.5rem;
+
+            flex: 0.3;
+            &:hover {
+                background-color: #d11a2a;
+                border-color: var(--neutral-light);
+                color: white;
+            }
+        }
+    }
+}

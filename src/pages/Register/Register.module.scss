@@ -1,0 +1,79 @@
+.container {
+    // border: solid;
+    border-radius: 15px;
+    position: relative;
+    padding: 2.5em 0.9em;
+    background-color: #fefefe;
+    box-shadow: 1px 12px 20px -10px #ccc;
+    width: 100%;
+    display: block;
+    margin: auto;
+
+    @media(min-width: 768px) {
+        width: 90%;
+    }
+    @media(min-width: 992px) {
+        width: 75%;
+    }
+    @media(min-width: 1200px) {
+        width: 65%;
+    }
+    @media(min-width: 1400px) {
+        width: 60%;
+    }
+
+    .footer {
+        // border: solid;
+        display: flex;
+        justify-content: space-around;
+        button {
+            border: solid 1px var(--neutral-light2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            padding: 0 1em;
+            height: 40px;
+            width: 40%;
+            font-size: 1.1rem;
+            font-weight: 500;;
+            text-transform: capitalize;
+            cursor: pointer;
+            background-color: var(--neutral-light);
+            color: var(--neutral-dark);
+            transition: all 0.3s;
+
+            &:hover:not(:disabled) {
+                background-color: var(--primary);
+                color: white;
+            }
+            &:disabled {
+                cursor: not-allowed;
+            }
+        }
+
+        .loginLink {
+            color: var(--neutral-light2);
+            align-self: flex-end;
+            font-size: 0.88rem;
+            font-weight: 500;
+            &:hover {
+                color: var(--primary);
+            }
+        }
+    }
+
+    .errorMessage {
+        // border: solid;
+        text-align: center;
+        color: red;
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        width: 100%;
+    }
+
+    &.onError {
+        box-shadow: 1px 12px 20px -10px #f08080;
+    }
+}

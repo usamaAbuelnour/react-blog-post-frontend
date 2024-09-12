@@ -1,0 +1,35 @@
+.container {
+    // border: solid;
+    display: flex;
+    flex-direction: column;
+    // & > * {border: solid green;}
+    padding-bottom: 0.8em;
+    input, textarea {
+        padding: 0.9em;
+        border: solid 1px var(--neutral-light);
+        background-color: var(--neutral-light);
+        border-radius: 5px;
+        color: var(--neutral-dark);
+        font-size: 1rem;
+        font-weight: 500;
+        resize: none;
+        &::placeholder {
+            font-weight: 500;
+            color: var(--neutral-light2);
+            font-size: 1rem;
+        }
+        &:focus {
+            outline-color: var(--neutral-light2);
+        }
+    }
+    textarea {
+        height: 120px;
+    }
+    .errorMessage {
+        font-size: 0.87rem;
+        margin-top: 0.8em;
+        font-weight: 500;
+        color: red;
+        visibility: hidden;
+    }
+}
